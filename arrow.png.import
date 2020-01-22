@@ -1,0 +1,13 @@
+[remap]
+
+importer="image"
+type="Image"
+path="res://.import/arrow.png-9a52328c9c8f79a188b7fabb13b1f3fc.image"
+
+[deps]
+
+source_file="res://arrow.png"
+dest_files=[ "res://.import/arrow.png-9a52328c9c8f79a188b7fabb13b1f3fc.image" ]
+
+[params]
+
