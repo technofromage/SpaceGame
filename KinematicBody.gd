@@ -33,5 +33,3 @@ func _physics_process(delta):
 		get_viewport().warp_mouse(Vector2(500,300))
 		rotation_horz=get_viewport().get_mouse_position().x-500
 		rotate_y(-rotation_horz*sensitivity_horz)
-	globals.accel.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
-	globals.accel.z = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
