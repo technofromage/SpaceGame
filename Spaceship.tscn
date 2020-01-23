@@ -114,32 +114,29 @@ script = ExtResource( 3 )
 
 [node name="UI" type="Node" parent="."]
 
-[node name="PopupPanel" type="PopupPanel" parent="UI"]
+[node name="PopupPanel" type="Popup" parent="UI"]
 visible = true
-anchor_left = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = -500.0
-margin_top = 19.0
-margin_right = -10.0
-margin_bottom = -60.0
-size_flags_vertical = 3
+margin_left = 510.0
+margin_top = 6.0
+margin_right = 1022.0
+margin_bottom = 564.0
 popup_exclusive = true
 script = ExtResource( 4 )
 
-[node name="TextEdit" type="TextEdit" parent="UI/PopupPanel"]
-margin_left = 4.0
-margin_top = 4.0
-margin_right = 486.0
-margin_bottom = 517.0
-show_line_numbers = true
+[node name="HistoryPanel" type="TextEdit" parent="UI/PopupPanel"]
+margin_right = 515.0
+margin_bottom = 556.0
+readonly = true
 wrap_enabled = true
-caret_block_mode = true
-caret_blink = true
-caret_blink_speed = 1.0
-caret_moving_by_right_click = false
+
+[node name="InputPanel" type="TextEdit" parent="UI/PopupPanel"]
+margin_left = 19.3091
+margin_top = 504.421
+margin_right = 496.309
+margin_bottom = 544.421
 
 [node name="temp_hud_translation" type="Node" parent="UI"]
+editor/display_folded = true
 script = ExtResource( 5 )
 
 [node name="arrowup" type="TextureRect" parent="UI/temp_hud_translation"]
@@ -174,6 +171,7 @@ rect_rotation = -90.0
 texture = SubResource( 10 )
 
 [node name="temp_hud_rotation" type="Node" parent="UI"]
+editor/display_folded = true
 script = ExtResource( 6 )
 
 [node name="arrowup" type="TextureRect" parent="UI/temp_hud_rotation"]
@@ -208,6 +206,7 @@ rect_rotation = -90.0
 texture = SubResource( 12 )
 
 [node name="Outside" type="Spatial" parent="."]
+editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10 )
 
 [node name="CubeOuside" type="MeshInstance" parent="Outside"]
