@@ -28,6 +28,6 @@ func _physics_process(delta):
 		
 		#capturing the ship's motion
 		translate(globals.accel*delta)
-		rotate_x(globals.rot_accel.x*delta)
-		rotate_y(globals.rot_accel.y*delta)
-		rotate_z(globals.rot_accel.z*delta)
+		rotate_object_local(Vector3(1,0,0),globals.rot_accel.x*delta)
+		rotate_object_local(Vector3(0,1,0),globals.rot_accel.y*delta)
+		rotate_object_local(Vector3(0,0,1),globals.rot_accel.z*delta)

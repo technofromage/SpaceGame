@@ -28,11 +28,12 @@ func _process(delta):
 		text.set_text("")
 		history.set_text(history.get_text()+"\n"+command)
 		history.set_text(history.get_text()+proccess(command))
-  
+
 func open():
 	popup()
 	globals.is_movement_locked=true
 	is_open=true
+	text.grab_focus()
 
 func close():
 	hide()
@@ -60,15 +61,15 @@ func proccess(text):
 			return "left thruster on"
 	if words[0]=="turn":
 		if words[1]=="forward":
-			globals.rot_accel.y=-1
+			globals.rot_accel.x=-1
 			return "forward thruster on"
 		if words[1]=="back":
-			globals.rot_accel.y=1
+			globals.rot_accel.x=1
 			return "reverse thruster on"
 		if words[1]=="left":
-			globals.rot_accel.x=-1
+			globals.rot_accel.y=-1
 			return "right thruster on"
 		if words[1]=="right":
-			globals.rot_accel.x=1
+			globals.rot_accel.y=1
 			return "left thruster on"
 	return "error"
