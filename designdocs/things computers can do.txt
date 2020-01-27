@@ -1,0 +1,14 @@
+hacking
+cloak
+shields
+laser weapons
+communications
+cameras
+
+idea:
+if the player is a ai looking through cameras
+The player could slow down time for extra power (ie: overclocking)
+The would crew is made up of little bots
+GIVE CREDITS TO TYLER
+
+THINK ABOUT MULTIPLE SOLLUTIOINS TO THE SAME PROBLEM
