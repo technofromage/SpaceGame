@@ -1,0 +1,7 @@
+Manage power and resources
+Programming inserters and lights and weapons
+manage engines on all sides
+manage sensors @ reaction wheels
+video displays and cameras?
+
+outside ship is managed on a different "game engine" than inside ship; consider displaying windows and stuff on screens

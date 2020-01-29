@@ -6,16 +6,16 @@ var functionsG=["forward","back","left","right"]
 var functionsR=["go","turn"]
 
 func _ready():
-	history=get_child(0)
-	text=get_child(1)
-	history.set_syntax_coloring(true)
+	history=get_child(1)#where the previous commands go
+	text=get_child(2)#where the player input texts
+	#history.set_syntax_coloring(true)
 	text.set_syntax_coloring(true)
 	for word in functionsR:
-		history.add_keyword_color(word,Color.royalblue)
+		#history.add_keyword_color(word,Color.royalblue)
 		text.add_keyword_color(word,Color.royalblue)
 	for word in functionsG:
-		history.add_keyword_color(word,Color.green)
-		text.add_keyword_color(word,Color.royalblue)
+		#history.add_keyword_color(word,Color.green)
+		text.add_keyword_color(word,Color.green)
 
 func _process(delta):
 	if Input.is_action_just_pressed("ui_textOpen"):
@@ -24,10 +24,10 @@ func _process(delta):
 		else:
 			open()
 	if Input.is_action_just_pressed("ui_accept"):#manage input
-		var command = text.get_text()
+		var command = text.get_text().strip_edges(true,true)
 		text.set_text("")
-		history.set_text(history.get_text()+"\n"+command)
-		history.set_text(history.get_text()+proccess(command))
+		history.push_text(command)
+		history.push_text(proccess(command))
 
 func open():
 	popup()

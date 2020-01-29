@@ -1,13 +1,15 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://KinematicBody.gd" type="Script" id=1]
 [ext_resource path="res://Camera.gd" type="Script" id=2]
 [ext_resource path="res://PopupPanel.gd" type="Script" id=3]
-[ext_resource path="res://temp_hud_translate.tres.gd" type="Script" id=4]
-[ext_resource path="res://temp_hud_rotation.gd" type="Script" id=5]
-[ext_resource path="res://sidemenu.png" type="Texture" id=6]
-[ext_resource path="res://Controlls.gd" type="Script" id=7]
-[ext_resource path="res://Space_Camera.tres.gd" type="Script" id=8]
+[ext_resource path="res://grey.png" type="Texture" id=4]
+[ext_resource path="res://HistoryTextPanel.gd" type="Script" id=5]
+[ext_resource path="res://temp_hud_translate.tres.gd" type="Script" id=6]
+[ext_resource path="res://temp_hud_rotation.gd" type="Script" id=7]
+[ext_resource path="res://sidemenu.png" type="Texture" id=8]
+[ext_resource path="res://Controlls.gd" type="Script" id=9]
+[ext_resource path="res://Space_Camera.tres.gd" type="Script" id=10]
 
 [sub_resource type="ViewportTexture" id=1]
 viewport_path = NodePath("Outside/spaceship_outside/sideView")
@@ -74,6 +76,7 @@ size = Vector3( 2, 0, 1 )
 [node name="spacePrograming" type="Spatial"]
 
 [node name="Inside" type="Spatial" parent="."]
+editor/display_folded = true
 
 [node name="sideViewWindow" type="MeshInstance" parent="Inside"]
 transform = Transform( 1.41421, 0, 0.707107, 0, 2, 0, -1.41421, 0, 0.707107, -3.9, 0, -1.99 )
@@ -115,27 +118,37 @@ script = ExtResource( 2 )
 
 [node name="PopupPanel" type="Popup" parent="UI"]
 visible = true
-margin_left = 510.0
-margin_top = 6.0
-margin_right = 1022.0
-margin_bottom = 562.0
+margin_left = 640.0
+margin_top = 355.0
+margin_right = 990.0
+margin_bottom = 585.0
 popup_exclusive = true
 script = ExtResource( 3 )
 
-[node name="HistoryPanel" type="TextEdit" parent="UI/PopupPanel"]
-margin_right = 515.0
-margin_bottom = 507.0
-readonly = true
-wrap_enabled = true
+[node name="TextureRect" type="TextureRect" parent="UI/PopupPanel"]
+anchor_right = 0.34
+margin_right = 231.0
+margin_bottom = 242.0
+texture = ExtResource( 4 )
+expand = true
 
-[node name="InputPanel" type="TextEdit" parent="UI/PopupPanel"]
-margin_top = 505.0
-margin_right = 515.0
-margin_bottom = 552.0
+[node name="HistoryTextPanel" type="RichTextLabel" parent="UI/PopupPanel"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 340.0
+margin_bottom = 190.0
+script = ExtResource( 5 )
+wordcount = 8
+
+[node name="InputTextPanel" type="TextEdit" parent="UI/PopupPanel"]
+margin_left = 8.63934
+margin_top = 191.779
+margin_right = 345.639
+margin_bottom = 238.779
 
 [node name="temp_hud_translation" type="Node" parent="UI"]
 editor/display_folded = true
-script = ExtResource( 4 )
+script = ExtResource( 6 )
 
 [node name="arrowup" type="TextureRect" parent="UI/temp_hud_translation"]
 margin_left = 42.0
@@ -170,7 +183,7 @@ texture = SubResource( 10 )
 
 [node name="temp_hud_rotation" type="Node" parent="UI"]
 editor/display_folded = true
-script = ExtResource( 5 )
+script = ExtResource( 7 )
 
 [node name="arrowup" type="TextureRect" parent="UI/temp_hud_rotation"]
 margin_left = 42.0
@@ -209,8 +222,8 @@ margin_top = 247.731
 margin_right = 301.432
 margin_bottom = 1067.73
 rect_scale = Vector2( 0.7, 0.7 )
-texture = ExtResource( 6 )
-script = ExtResource( 7 )
+texture = ExtResource( 8 )
+script = ExtResource( 9 )
 
 [node name="Outside" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10 )
@@ -260,6 +273,7 @@ shadow_enabled = true
 omni_range = 10.0
 
 [node name="spaceship_outside" type="Spatial" parent="Outside"]
+editor/display_folded = true
 
 [node name="frontView" type="Viewport" parent="Outside/spaceship_outside"]
 size = Vector2( 512, 256 )
@@ -270,7 +284,7 @@ shadow_atlas_size = 100
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10 )
 current = true
 fov = 90.0
-script = ExtResource( 8 )
+script = ExtResource( 10 )
 
 [node name="sideView" type="Viewport" parent="Outside/spaceship_outside"]
 size = Vector2( 256, 256 )
@@ -281,4 +295,4 @@ shadow_atlas_size = 100
 transform = Transform( 0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -3.9, 0, -9 )
 current = true
 fov = 90.0
-script = ExtResource( 8 )
+script = ExtResource( 10 )
