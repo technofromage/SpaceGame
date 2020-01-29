@@ -46,30 +46,31 @@ func proccess(text):
 		globals.accel=Vector3(0,0,0)
 		globals.rot_accel=Vector3(0,0,0)
 		return "all thrust stoped"
-	if words[0]=="go":
-		if words[1]=="forward":
-			globals.accel.z=-1
-			return "forward thruster on"
-		if words[1]=="back":
-			globals.accel.z=1
-			return "reverse thruster on"
-		if words[1]=="left":
-			globals.accel.x=-1
-			return "right thruster on"
-		if words[1]=="right":
-			globals.accel.x=1
-			return "left thruster on"
-	if words[0]=="turn":
-		if words[1]=="forward":
-			globals.rot_accel.x=-1
-			return "forward thruster on"
-		if words[1]=="back":
-			globals.rot_accel.x=1
-			return "reverse thruster on"
-		if words[1]=="left":
-			globals.rot_accel.y=-1
-			return "right thruster on"
-		if words[1]=="right":
-			globals.rot_accel.y=1
-			return "left thruster on"
+	if words.size() > 1: #fixed crash if player only enters first word
+		if words[0]=="go":
+			if words[1]=="forward":
+				globals.accel.z=-1
+				return "forward thruster on"
+			if words[1]=="back":
+				globals.accel.z=1
+				return "reverse thruster on"
+			if words[1]=="left":
+				globals.accel.x=-1
+				return "right thruster on"
+			if words[1]=="right":
+				globals.accel.x=1
+				return "left thruster on"
+		if words[0]=="turn":
+			if words[1]=="forward":
+				globals.rot_accel.x=-1
+				return "forward thruster on"
+			if words[1]=="back":
+				globals.rot_accel.x=1
+				return "reverse thruster on"
+			if words[1]=="left":
+				globals.rot_accel.y=-1
+				return "right thruster on"
+			if words[1]=="right":
+				globals.rot_accel.y=1
+				return "left thruster on"
 	return "error"
