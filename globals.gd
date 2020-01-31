@@ -1,6 +1,6 @@
 extends Node
 # Global Variables
-var is_movement_locked = false
+var is_movement_locked = true
 
 #spaceship_motion
 var accel = Vector3(0,0,0)
