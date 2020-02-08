@@ -7,8 +7,8 @@
 [ext_resource path="res://temp_hud_rotation.gd" type="Script" id=5]
 [ext_resource path="res://sidemenu.png" type="Texture" id=6]
 [ext_resource path="res://Controlls.gd" type="Script" id=7]
-[ext_resource path="res://Space_Camera.tres.gd" type="Script" id=8]
-[ext_resource path="res://Camera.gd" type="Script" id=9]
+[ext_resource path="res://Camera.gd" type="Script" id=8]
+[ext_resource path="res://slider_camera.gd" type="Script" id=9]
 
 [sub_resource type="ViewportTexture" id=1]
 viewport_path = NodePath("Outside/spaceship_outside/sideView")
@@ -45,7 +45,7 @@ data = {
 "width": 64
 }
 
-[sub_resource type="ImageTexture" id=13]
+[sub_resource type="ImageTexture" id=11]
 flags = 5
 flags = 5
 image = SubResource( 18 )
@@ -60,23 +60,23 @@ data = {
 "width": 64
 }
 
-[sub_resource type="ImageTexture" id=15]
+[sub_resource type="ImageTexture" id=13]
 flags = 5
 flags = 5
 image = SubResource( 19 )
 size = Vector2( 32, 32 )
 
-[sub_resource type="CubeMesh" id=16]
+[sub_resource type="CubeMesh" id=14]
 size = Vector3( 0.5, 0.5, 0.5 )
 
-[sub_resource type="CubeMesh" id=17]
+[sub_resource type="CubeMesh" id=15]
 size = Vector3( 2, 0, 1 )
 
-[sub_resource type="SpatialMaterial" id=10]
+[sub_resource type="SpatialMaterial" id=16]
 albedo_color = Color( 0.294118, 0.294118, 0.294118, 1 )
 
-[sub_resource type="CylinderMesh" id=11]
-material = SubResource( 10 )
+[sub_resource type="CylinderMesh" id=17]
+material = SubResource( 16 )
 top_radius = 1.2
 height = 3.0
 radial_segments = 8
@@ -120,6 +120,7 @@ shadow_enabled = true
 omni_range = 10.0
 
 [node name="walls" type="Node" parent="Inside"]
+editor/display_folded = true
 
 [node name="wall1" type="MeshInstance" parent="Inside/walls"]
 transform = Transform( 3, 0, 0, 0, -0.00377263, -2.99998, 0, 0.999993, -0.0113179, 0, 0, -3 )
@@ -150,10 +151,10 @@ material/0 = null
 
 [node name="PopupPanel" type="Popup" parent="UI"]
 visible = true
-margin_left = 640.0
-margin_top = 355.0
-margin_right = 990.0
-margin_bottom = 585.0
+margin_left = 649.0
+margin_top = 332.0
+margin_right = 1002.0
+margin_bottom = 573.0
 popup_exclusive = true
 script = ExtResource( 1 )
 
@@ -187,7 +188,7 @@ margin_left = 42.0
 margin_top = 10.0
 margin_right = 74.0
 margin_bottom = 42.0
-texture = SubResource( 13 )
+texture = SubResource( 11 )
 
 [node name="arrowdown" type="TextureRect" parent="UI/temp_hud_translation"]
 margin_left = 74.0
@@ -195,7 +196,7 @@ margin_top = 106.0
 margin_right = 106.0
 margin_bottom = 138.0
 rect_rotation = 180.0
-texture = SubResource( 13 )
+texture = SubResource( 11 )
 
 [node name="arrowleft" type="TextureRect" parent="UI/temp_hud_translation"]
 margin_left = 106.0
@@ -203,7 +204,7 @@ margin_top = 42.0
 margin_right = 138.0
 margin_bottom = 74.0
 rect_rotation = 90.0
-texture = SubResource( 13 )
+texture = SubResource( 11 )
 
 [node name="arrowright" type="TextureRect" parent="UI/temp_hud_translation"]
 margin_left = 10.0
@@ -211,7 +212,7 @@ margin_top = 74.0
 margin_right = 42.0
 margin_bottom = 106.0
 rect_rotation = -90.0
-texture = SubResource( 13 )
+texture = SubResource( 11 )
 
 [node name="temp_hud_rotation" type="Node" parent="UI"]
 editor/display_folded = true
@@ -222,7 +223,7 @@ margin_left = 42.0
 margin_top = 110.0
 margin_right = 74.0
 margin_bottom = 142.0
-texture = SubResource( 15 )
+texture = SubResource( 13 )
 
 [node name="arrowdown" type="TextureRect" parent="UI/temp_hud_rotation"]
 margin_left = 74.0
@@ -230,7 +231,7 @@ margin_top = 206.0
 margin_right = 106.0
 margin_bottom = 238.0
 rect_rotation = 180.0
-texture = SubResource( 15 )
+texture = SubResource( 13 )
 
 [node name="arrowleft" type="TextureRect" parent="UI/temp_hud_rotation"]
 margin_left = 106.0
@@ -238,7 +239,7 @@ margin_top = 142.0
 margin_right = 138.0
 margin_bottom = 174.0
 rect_rotation = 90.0
-texture = SubResource( 15 )
+texture = SubResource( 13 )
 
 [node name="arrowright" type="TextureRect" parent="UI/temp_hud_rotation"]
 margin_left = 10.0
@@ -246,16 +247,20 @@ margin_top = 174.0
 margin_right = 42.0
 margin_bottom = 206.0
 rect_rotation = -90.0
-texture = SubResource( 15 )
+texture = SubResource( 13 )
 
 [node name="Controlls" type="TextureRect" parent="UI"]
-margin_left = 1.43194
-margin_top = 247.731
-margin_right = 301.432
-margin_bottom = 1067.73
+anchor_bottom = 1.0
+margin_left = 2.34668
+margin_top = 245.067
+margin_right = 302.347
+margin_bottom = 262.067
 rect_scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 6 )
+stretch_mode = 2
 script = ExtResource( 7 )
+
+[node name="temp_option_toggle" type="Node" parent="UI"]
 
 [node name="Outside" type="Spatial" parent="."]
 editor/display_folded = true
@@ -263,41 +268,41 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10 )
 
 [node name="CubeOuside" type="MeshInstance" parent="Outside"]
 transform = Transform( 0.97989, 0, 0.199538, 0.06163, 0.951106, -0.302652, -0.189782, 0.308863, 0.93198, -0.03, -0.0100002, -5.47543 )
-mesh = SubResource( 16 )
+mesh = SubResource( 14 )
 material/0 = null
 
 [node name="CubeOuside2" type="MeshInstance" parent="Outside"]
 transform = Transform( 0.97989, 0, 0.199538, 0.06163, 0.951106, -0.302652, -0.189782, 0.308863, 0.93198, -4.51972, -0.0100002, -9.29068 )
-mesh = SubResource( 16 )
+mesh = SubResource( 14 )
 material/0 = null
 
 [node name="CubeOuside3" type="MeshInstance" parent="Outside"]
 transform = Transform( 0.97989, 0, 0.199538, 0.06163, 0.951106, -0.302652, -0.189782, 0.308863, 0.93198, -6.55269, -0.0100002, -4.41548 )
-mesh = SubResource( 16 )
+mesh = SubResource( 14 )
 material/0 = null
 
 [node name="Floor" type="MeshInstance" parent="Outside"]
 transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 2 )
 visible = false
-mesh = SubResource( 17 )
+mesh = SubResource( 15 )
 material/0 = null
 
 [node name="Floor2" type="MeshInstance" parent="Outside"]
 transform = Transform( -4.37114e-008, -1, 0, 1, -4.37114e-008, 0, 0, 0, 1, 2, 0, 2 )
 visible = false
-mesh = SubResource( 17 )
+mesh = SubResource( 15 )
 material/0 = null
 
 [node name="Floor4" type="MeshInstance" parent="Outside"]
 transform = Transform( -4.37114e-008, -1, 0, 1, -4.37114e-008, 0, 0, 0, 1, -2, 0, 2 )
 visible = false
-mesh = SubResource( 17 )
+mesh = SubResource( 15 )
 material/0 = null
 
 [node name="Floor3" type="MeshInstance" parent="Outside"]
 transform = Transform( 2, 0, 0, 0, 0.999961, -0.00885192, 0, 0.00885192, 0.999961, 0, 1, 2 )
 visible = false
-mesh = SubResource( 17 )
+mesh = SubResource( 15 )
 material/0 = null
 
 [node name="OmniLight2" type="OmniLight" parent="Outside"]
@@ -317,7 +322,6 @@ shadow_atlas_size = 100
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10 )
 current = true
 fov = 90.0
-script = ExtResource( 8 )
 
 [node name="sideView" type="Viewport" parent="Outside/spaceship_outside"]
 size = Vector2( 256, 256 )
@@ -328,28 +332,39 @@ shadow_atlas_size = 100
 transform = Transform( 0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -3.9, 0, -9 )
 current = true
 fov = 90.0
-script = ExtResource( 8 )
 
 [node name="Camera" type="Camera" parent="."]
-editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0239248, 2.02753, 6.71442 )
 fov = 74.0
 near = 0.1
-script = ExtResource( 9 )
+script = ExtResource( 8 )
 
 [node name="camera_model" type="MeshInstance" parent="Camera"]
 transform = Transform( 0.2, 0, 0, 0, -8.74228e-009, 0.2, 0, -0.2, -8.74228e-009, 0, 0, 0 )
-mesh = SubResource( 11 )
+mesh = SubResource( 17 )
 material/0 = null
 
 [node name="Camera2" type="Camera" parent="."]
-transform = Transform( -0.873657, 0, -0.486542, 0, 1, 0, 0.486542, 0, -0.873657, -3.16387, 2.29774, -2.65645 )
+transform = Transform( -1, 0, 8.74228e-008, 0, 1, 0, -8.74228e-008, 0, -1, -2.15554, 2.29774, -2.65645 )
 fov = 74.0
 near = 0.1
-script = ExtResource( 9 )
+script = ExtResource( 8 )
 key = 50
 
 [node name="camera_model" type="MeshInstance" parent="Camera2"]
-transform = Transform( 0.2, 0, 0, 0, -8.74228e-009, 0.2, 0, -0.2, -8.74228e-009, 0, 0, 0 )
-mesh = SubResource( 11 )
+transform = Transform( 0.2, -7.45058e-009, 2.22045e-016, 0, -8.74228e-009, 0.2, -7.45058e-009, -0.2, -8.74228e-009, 0, 0, 0 )
+mesh = SubResource( 17 )
 material/0 = null
+
+[node name="slider_camera" type="HSlider" parent="."]
+margin_left = 117.945
+margin_top = 406.804
+margin_right = 188.945
+margin_bottom = 472.804
+max_value = 1.0
+scrollable = false
+tick_count = 2
+ticks_on_borders = true
+script = ExtResource( 9 )
+[connection signal="mouse_entered" from="slider_camera" to="slider_camera" method="_on_slider_camera_mouse_entered"]
+[connection signal="value_changed" from="slider_camera" to="slider_camera" method="_on_slider_camera_value_changed"]

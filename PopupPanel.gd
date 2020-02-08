@@ -1,5 +1,5 @@
 extends Popup
-var is_open=false
+var is_open=true
 var history
 var text
 var functionsG=["forward","back","left","right"]

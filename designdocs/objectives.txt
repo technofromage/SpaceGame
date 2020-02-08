@@ -1,0 +1,6 @@
+possibilities:
+You wake up with knowledge of your destination - your low on resources and you must make it there without running out of resources
+
+there may be a time limit to create another failstate
+
+solar systems may be grouped by constilations to make generation easier

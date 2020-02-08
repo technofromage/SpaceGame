@@ -5,3 +5,9 @@ manage sensors @ reaction wheels
 video displays and cameras?
 
 outside ship is managed on a different "game engine" than inside ship; consider displaying windows and stuff on screens
+
+in-game docs are voices like a parent teaching a child
+
+
+extra possibilities:
+different starting ships?
