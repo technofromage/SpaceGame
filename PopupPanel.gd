@@ -34,11 +34,13 @@ func open():
 	globals.is_movement_locked=true
 	is_open=true
 	text.grab_focus()
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 func close():
 	hide()
 	globals.is_movement_locked=false
 	is_open=false
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	
 func proccess(text):
 	var words = text.strip_edges().rsplit(" ",true,2)
