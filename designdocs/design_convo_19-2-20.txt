@@ -1,0 +1,116 @@
+----STEVEN Yesterday at 2:12 PM
+I have been thinking about my game some more
+I don't think a first person perspective will be very good for a game like this, so here is my new pitch
+
+----RYAN Yesterday at 2:13 PM
+okay so we're just making starsector 2 electric boogaloo?
+not complaining
+----STEVEN Yesterday at 2:14 PM
+It could be like a star-sector type perspective
+I want it to have a Pathalogic type feeling of resource management, and its realistic feeling cause and effect
+The player could be managing power and inventory while trying to get their important things - atm it will be a human colony- to a sector/system/planet far away
+Turning on and off different systems on your ship will change how much information the player gets, how much power is used and may expose the player to different dangers
+Npc (different races) is a feature I like, but I'm not sure how to implement it while keeping the same feeling of being on the edge of disaster
+Also: let me know what you think
+----RYAN Yesterday at 2:22 PM
+you could use a "campaign" system so to say
+The default experience "The lone expanse" involves trekking though an empty galaxy trying to find a place to settle
+The alternate experience "Xeno's Abroad" involves navigating though a galaxy full of various space age aliens, some hostile and some not, trying to find a place to settle
+release the game with the lone expanse first
+then make an update with Xeno's Abroad
+new content generates new hype even after launch
+can be free
+or paid
+whatever you want
+----STEVEN Yesterday at 2:23 PM
+I like that
+I was considering having alternative ships as unlockable gameplay, that may pair nicely
+----RYAN Yesterday at 2:23 PM
+yeah that would mesh well
+pick a scenario, pick a ship type
+---BOWEN Yesterday at 9:21 PM
+I like this idea
+the more of a political intrigue/survival aspect of similar to starsector style gameplay
+what I like of an idea, is to have the "Lone Expanse" be survival right, so that stays unchanged
+but "Fractured Aether" be the campaign
+where you not only have to navigate the xenos but to instead of just survive, trying to navigate the political climate
+some like you and offer help while others see you as a nuisance
+some races think that, while Humans haven't even discovered FTL travel (A closely guarded secret by this xenos government) that their weapons & ingenuity far surpass the rest
+so Nuclear weapons / reactors could be something that is FAR beyond their conception, that feels like playing with the universe in a way that was not meant to be
+hell
+playing as an AI means that some may think you an abomination
+perhaps only humans have unlocked the potential for AI
+so they think your thoughts are dangerous, as conflict is clunky and unfamiliar
+----STEVEN Yesterday at 9:25 PM
+I havent considered a survival mode
+If it ends up being fun then I might add a gamemode for it
+I really like the idea of the races looking down on your mission for whatever ideological reason
+---BOWEN Yesterday at 9:25 PM
+this makes it so combat is more of "how prepared are you" rather than having more guns, because you are just one ship
+but perhaps your weapons are more strong
+fighting an ideological battle is more interesting and conceptually harder
+getting around blockades with one lone ship
+passing embargos
+black market deals
+under the table deals with humanitarian aid but it accidentally makes the environmentalist extremists rise to power and reduce the amount of tech the area can produce
+like your actions influence the region and all eyes are on you because humans and AI are like the one drop of chaos in the bottle
+anything they set out to do gets done while other races are more collective, more complacent and traditional
+perhaps they are older and live longer
+while humans are candles that burn bright in the wind
+----STEVEN Yesterday at 9:29 PM
+I love all of that
+the races could look down on your ship for stuff like that, perhaps you need to convince small bands of people to help you out somehow
+or maybe you dont risk the dangers that communication could bring
+a game based around being prepared sounds like exactly the angle I am looking for
+---BOWEN Yesterday at 9:30 PM
+having more of means to get around the blockade or being able to find a way through it by
+1.) fuel
+2.) cloaking
+3.) paperwork
+4.) sympathy
+5.) blackmail / bribe
+etc
+hell even faking a threat elsewhere
+I feel like conflict would feel like an "out of necessity" rather than "hell yeah let's go in with the guns" but weapons need lots of power however they hit hard
+maybe how you get power is through nuclear
+and to get the deuterium or plutonium you need to allow planets to help you set up a system for it
+perhaps solar is only enough to sustain you or bare minimum systems for like 3 people instead of the whole colony
+but to them mimicking the stars is blasphemy
+like a halo type religious situation
+----STEVEN Yesterday at 9:33 PM
+sure
+I like the idea of you somehow seeming "magical" to the races you meet w/ your nuclear power
+
+I was considering letting players rest close to a nearby star w/ solar panels for a way to exchange time for power
+it would only work if there was somesort of time limit
+---BOWEN Yesterday at 9:33 PM
+I think a time limit works
+like the actual ship is running on auxiliary power but the solar is just for you kinda thing
+ultimately if you powered down and had solar on it would just tick down slowly but still a net loss
+fusion is the BIG power
+and you're running out of fuel and your ignition system is broken
+OR
+you're a scouting ship
+----STEVEN Yesterday at 9:35 PM
+i was thinking like solar panels wouldn't be enough to re-fill batteries unless you went into low-power mode
+but then you would have to turn off for a bit, wasting time
+---BOWEN Yesterday at 9:36 PM
+and you're trying to uncover FTL tech because Humanity knows that there are aliens but it's hard to reach them
+like the sun is dying back in the Sol System
+and they sent you to a star system, where you accidentally went with an alien ship through a wormhole (their FTL) and are now trying to uncover it before the sun supernovas
+----STEVEN Yesterday at 9:38 PM
+that would be a good way to do a diplomacy game
+I don't trust my writing skills enough to make a game like that though
+maybe that could be a sequel project
+---BOWEN Yesterday at 9:49 PM
+i can write I promise
+i'll have a lot of time on my hands in tech school after this semester
+i want to learn how to synthesize music and I'll want to write some things
+----RYAN Yesterday at 10:11 PM
+I dunno I think that we want typed things
+hand writing isn't very useful in the game industry
+----STEVEN Yesterday at 10:39 PM
+hand writing may be just as usefull as something typed
+i figure they may have laptops in tech school though
+----RYAN Yesterday at 11:16 PM
+also I the idea of there being venerable races that view humans as short lived, but there should be races that canonically live to similar ages, and races that live even shorter than humans
