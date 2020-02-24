@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/arrow.png-9a52328c9c8f79a188b7fabb13b1f3fc.stex"
+path="res://.import/big_shipa.png-d57d1d7ad719a978ccde525be9e8dede.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://arrow.png"
-dest_files=[ "res://.import/arrow.png-9a52328c9c8f79a188b7fabb13b1f3fc.stex" ]
+source_file="res://designdocs/ships/big_shipa.png"
+dest_files=[ "res://.import/big_shipa.png-d57d1d7ad719a978ccde525be9e8dede.stex" ]
 
 [params]
 
