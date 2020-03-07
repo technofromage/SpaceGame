@@ -10,15 +10,15 @@ var rot= 0
 func _physics_process(delta):
 	if(Input.is_action_pressed("ui_left")):
 		if (Input.is_action_pressed("ui_alt")):
-			velocity.x-=(sin(rot*PI/180))
-			velocity.y-=(cos(rot*PI/180))
+			velocity.x-=(cos((rot+90)*PI/180))
+			velocity.y-=(sin((rot+90)*PI/180))
 		else:
 			rot-=0.5
 		globals.set_fuel(globals.fuel-0.1)
 	if(Input.is_action_pressed("ui_right")):
 		if (Input.is_action_pressed("ui_alt")):
-			velocity.x+=(sin(rot*PI/180))
-			velocity.y+=(cos(rot*PI/180))
+			velocity.x+=(cos((rot+90)*PI/180))
+			velocity.y+=(sin((rot+90)*PI/180))
 		else:
 			rot+=0.5
 		globals.set_fuel(globals.fuel-0.1)

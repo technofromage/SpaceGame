@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/sidemenu.png-ccbd2571fdbb64c47a89d72856fce6a1.stex"
+path="res://.import/spaceship.png-6c5cb8ec3385c5a06867e995997c254d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sidemenu.png"
-dest_files=[ "res://.import/sidemenu.png-ccbd2571fdbb64c47a89d72856fce6a1.stex" ]
+source_file="res://sprites/spaceship.png"
+dest_files=[ "res://.import/spaceship.png-6c5cb8ec3385c5a06867e995997c254d.stex" ]
 
 [params]
 

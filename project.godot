@@ -17,7 +17,7 @@ _global_script_class_icons={
 
 config/name="SpaceGame"
 run/main_scene="res://SpaceGame.tscn"
-config/icon="res://icon.png"
+config/icon="res://sprites/icon.png"
 
 [autoload]
 

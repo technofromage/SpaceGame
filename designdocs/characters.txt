@@ -1,0 +1,21 @@
+pathologic starsector ftl and sunless sea
+
+each character is an ai
+
+most ai are constructs
+
+one character could be a military officer, trying to use his military force to pressure to get his way. he must learn to use charasma
+he is brash
+
+one character could be a philanthropist, who tries to use charasma to get his way. he must learn to use force 
+he is meek
+
+one character could be an alien (the anthropologist?), who can travel faster than the human ships, and he is trying to rally a support effort to safe humanity
+
+one character could be a cold calculating "true" ai with seemingly non-sensicle answers and and has no  emontional connections
+he is the oldest character, he is broken and seems senile because he no longer follows his secondary directives
+he has been lied to, to prevent him from being all-knowning, 
+
+npcs
+one race has huge ships, but tiny weapons, as a race who does not like war they have no fancy science weapons, so they cannot follow through with their military threats
+-one possible option would be to overcharge a fancy weapon (leaving the player with little power in exchange for respect)

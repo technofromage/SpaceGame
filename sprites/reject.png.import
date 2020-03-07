@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/confirm.png-461bf31b4d3c190a416805a46f2759ef.stex"
+path="res://.import/reject.png-938b32bebf5af75277a61fc12e96c3a5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://confirm.png"
-dest_files=[ "res://.import/confirm.png-461bf31b4d3c190a416805a46f2759ef.stex" ]
+source_file="res://sprites/reject.png"
+dest_files=[ "res://.import/reject.png-938b32bebf5af75277a61fc12e96c3a5.stex" ]
 
 [params]
 
