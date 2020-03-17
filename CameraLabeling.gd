@@ -12,7 +12,7 @@ func _process(delta):
 
 func _draw():
 	#for each child in room IE each planet
-	for i in room.get_children():
+	for i in room.get_child(0).get_children():
 		var targetPos
 		if (drawExtra):
 			targetPos = i.get_global_transform_with_canvas().origin-get_viewport().size/2

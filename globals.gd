@@ -16,8 +16,8 @@ func _ready():
 	next_activeroom.get_parent().remove_child(next_activeroom)
 	get_node("/root/SpaceGame/activeroom").add_child(next_activeroom)
 	player = get_node("/root/SpaceGame/player")	#mark all usefull nodes
-	powerbar = get_node("/root/SpaceGame/player/UI/status/powerBar")
-	fuelbar = get_node("/root/SpaceGame/player/UI/status/fuelBar")
+	powerbar = get_node("/root/SpaceGame/player/Camera2D/status/powerBar")
+	fuelbar = get_node("/root/SpaceGame/player/Camera2D/status/fuelBar")
 	set_power(100)	#settup display values
 	set_fuel(100)
 

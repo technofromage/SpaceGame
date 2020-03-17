@@ -1,8 +1,7 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://sprites/spaceship.png" type="Texture" id=1]
 [ext_resource path="res://player.gd" type="Script" id=2]
-[ext_resource path="res://sprites/planet.png" type="Texture" id=3]
 [ext_resource path="res://sprites/fire.png" type="Texture" id=4]
 [ext_resource path="res://thrust_front.gd" type="Script" id=5]
 [ext_resource path="res://thrust_back.gd" type="Script" id=6]
@@ -160,17 +159,5 @@ script = ExtResource( 14 )
 [node name="Node2D" type="Node2D" parent="player/Camera2D"]
 
 [node name="activeroom" type="Node2D" parent="."]
-
-[node name="Sprite" type="Sprite" parent="activeroom"]
-position = Vector2( 200.076, 43.1054 )
-texture = ExtResource( 3 )
-
-[node name="Sprite3" type="Sprite" parent="activeroom"]
-position = Vector2( 596.153, -160.868 )
-texture = ExtResource( 3 )
-
-[node name="Sprite2" type="Sprite" parent="activeroom"]
-position = Vector2( -215.949, -167.922 )
-texture = ExtResource( 3 )
 [connection signal="button_up" from="player/Camera2D/Map/Button1" to="player/Camera2D/Map/Button1" method="_on_button_up"]
 [connection signal="button_up" from="player/Camera2D/Map/Button2" to="player/Camera2D/Map/Button2" method="_on_button_up"]
