@@ -13,8 +13,8 @@ func _ready():
 	rooms.append(get_node("/root/SpaceGame/rooms/room 0"))
 	rooms.append(get_node("/root/SpaceGame/rooms/room 1"))
 	player = get_node("/root/SpaceGame/player")
-	powerbar = get_node("/root/SpaceGame/player/UI/status/powerBar")
-	fuelbar = get_node("/root/SpaceGame/player/UI/status/fuelBar")
+	powerbar = get_node("/root/SpaceGame/player/Camera2D/status/powerBar")
+	fuelbar = get_node("/root/SpaceGame/player/Camera2D/status/fuelBar")
 	set_power(100)
 	set_fuel(100)
 

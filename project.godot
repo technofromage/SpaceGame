@@ -74,4 +74,5 @@ ui_map={
 
 [rendering]
 
+environment/default_clear_color=Color( 0.121569, 0.121569, 0.121569, 1 )
 environment/default_environment="res://default_env.tres"
