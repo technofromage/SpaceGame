@@ -29,8 +29,12 @@ func _physics_process(delta):
 	if(Input.is_action_pressed("ui_down")):
 		velocity.x-=(cos(rot*PI/180))
 		velocity.y-=(sin(rot*PI/180))
-		globals.set_fuel(globals.fuel-0.1)
+		globals.set_fuel(globals.fuel-0.5*delta)
 	
-	globals.set_power(globals.power-0.01)
+	globals.set_power(globals.power-0.5*delta)
 	set_rotation_degrees(rot)
 	translate(velocity*delta)
+	#function for solar power
+	var sunDist=get_node("/root/SpaceGame/activeroom").get_child(0).get_node("Sun").get_global_position().distance_to(get_global_position());
+	print(sunDist)
+	globals.set_power(globals.power+(1500/(sunDist*sunDist))*delta)	

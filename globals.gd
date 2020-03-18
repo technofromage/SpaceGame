@@ -18,7 +18,7 @@ func _ready():
 	player = get_node("/root/SpaceGame/player")	#mark all usefull nodes
 	powerbar = get_node("/root/SpaceGame/player/Camera2D/status/powerBar")
 	fuelbar = get_node("/root/SpaceGame/player/Camera2D/status/fuelBar")
-	set_power(100)	#settup display values
+	set_power(50)	#settup display values
 	set_fuel(100)
 
 func set_fuel(target):#sets fuel to target # and refreshes the appropriate HUD
