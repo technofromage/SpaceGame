@@ -158,10 +158,10 @@ margin_bottom = 68.0
 script = ExtResource( 14 )
 
 [node name="TextureRect" type="TextureRect" parent="player/Camera2D"]
-margin_left = -502.272
-margin_top = 33.6843
-margin_right = -202.272
-margin_bottom = 650.684
+margin_left = -497.976
+margin_top = 115.307
+margin_right = -197.976
+margin_bottom = 732.307
 rect_scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 3 )
 __meta__ = {
