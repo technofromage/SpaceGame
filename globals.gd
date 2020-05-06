@@ -8,6 +8,7 @@ var fuelbar		#the node for the fuel display
 var currentroom = 0 #the current open room's array 
 var player 		#the node for the player
 var room_file 	#the pre-loaded rooms.tscn file
+var sound_file	#the file for the audio display
 
 func _ready():
 	room_file = preload("res://rooms.tscn").instance()#load the 0 room
@@ -18,6 +19,7 @@ func _ready():
 	player = get_node("/root/SpaceGame/player")	#mark all usefull nodes
 	powerbar = get_node("/root/SpaceGame/player/Camera2D/status/powerBar")
 	fuelbar = get_node("/root/SpaceGame/player/Camera2D/status/fuelBar")
+	sound_file = get_node("/root/SpaceGame/Sounds/warp_sound")
 	set_power(50)	#settup display values
 	set_fuel(100)
 

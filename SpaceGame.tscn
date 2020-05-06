@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://sprites/spaceship.png" type="Texture" id=1]
 [ext_resource path="res://player.gd" type="Script" id=2]
@@ -14,6 +14,8 @@
 [ext_resource path="res://sprites/home.png" type="Texture" id=12]
 [ext_resource path="res://RoomButton.gd" type="Script" id=13]
 [ext_resource path="res://StatusBar.gd" type="Script" id=14]
+[ext_resource path="res://sounds/warp.wav" type="AudioStream" id=15]
+[ext_resource path="res://sounds/Bip.wav" type="AudioStream" id=16]
 [ext_resource path="res://CameraLabeling.gd" type="Script" id=17]
 
 [node name="SpaceGame" type="Node2D"]
@@ -169,5 +171,15 @@ __meta__ = {
 }
 
 [node name="activeroom" type="Node2D" parent="."]
+
+[node name="Sounds" type="Node" parent="."]
+
+[node name="warp_sound" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource( 15 )
+volume_db = -2.0
+
+[node name="button_sound" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource( 16 )
+volume_db = -2.0
 [connection signal="button_up" from="player/Camera2D/Map/Button1" to="player/Camera2D/Map/Button1" method="_on_button_up"]
 [connection signal="button_up" from="player/Camera2D/Map/Button2" to="player/Camera2D/Map/Button2" method="_on_button_up"]
