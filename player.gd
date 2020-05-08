@@ -30,7 +30,14 @@ func _physics_process(delta):
 		velocity.x-=(cos(rot*PI/180))
 		velocity.y-=(sin(rot*PI/180))
 		globals.set_fuel(globals.fuel-0.5*delta)
-	
+	if(Input.is_action_pressed("ui_brake")):
+		velocity.x-=abs(velocity.x/10)
+		velocity.y-=abs(velocity.y/10)
+		if (abs(velocity.x)<1):#if below threshold stop
+			velocity.x=0		#this may be temperary idk
+		if (abs(velocity.y)<1):
+			velocity.y=0	
+		globals.set_fuel(globals.fuel-0.4*delta)
 	globals.set_power(globals.power-0.5*delta)
 	set_rotation_degrees(rot)
 	translate(velocity*delta)

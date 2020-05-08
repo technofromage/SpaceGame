@@ -11,5 +11,5 @@ func _on_button_up():
 	globals.changeRoom(numroom)
 	marker.set_position(get_position())
 	globals.set_fuel(globals.fuel-10)
-	globals.sound_file.play();
+	globals.sound_file.get_node("warp_sound").play();
 	get_parent().set_visible(false);

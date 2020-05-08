@@ -9,15 +9,15 @@ func _ready():
 
 func _process(delta):#for the zoom
 	if Input.is_action_pressed("ui_zoom"):
-		set_scale(Vector2(3,3))
-		set_zoom(Vector2(3,3))#these must be the same values
-	else:
 		set_scale(Vector2(1,1))
-		set_zoom(Vector2(1,1))
+		set_zoom(Vector2(1,1))#these must be the same values
+	else:
+		set_scale(Vector2(2,2))
+		set_zoom(Vector2(2,2))
 	update()
 
 func _draw():
-	#for each child in room IE each planet
+	#for each child in room IE each planet draw the info
 	for i in room.get_child(0).get_children():
 		var targetPos
 		if (drawExtra):

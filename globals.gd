@@ -19,7 +19,7 @@ func _ready():
 	player = get_node("/root/SpaceGame/player")	#mark all usefull nodes
 	powerbar = get_node("/root/SpaceGame/player/Camera2D/status/powerBar")
 	fuelbar = get_node("/root/SpaceGame/player/Camera2D/status/fuelBar")
-	sound_file = get_node("/root/SpaceGame/Sounds/warp_sound")
+	sound_file = get_node("/root/SpaceGame/GlobalSounds")
 	set_power(50)	#settup display values
 	set_fuel(100)
 

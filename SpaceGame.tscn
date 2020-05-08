@@ -172,13 +172,13 @@ __meta__ = {
 
 [node name="activeroom" type="Node2D" parent="."]
 
-[node name="Sounds" type="Node" parent="."]
+[node name="GlobalSounds" type="Node" parent="."]
 
-[node name="warp_sound" type="AudioStreamPlayer" parent="Sounds"]
+[node name="warp_sound" type="AudioStreamPlayer" parent="GlobalSounds"]
 stream = ExtResource( 15 )
 volume_db = -2.0
 
-[node name="button_sound" type="AudioStreamPlayer" parent="Sounds"]
+[node name="button_sound" type="AudioStreamPlayer" parent="GlobalSounds"]
 stream = ExtResource( 16 )
 volume_db = -2.0
 [connection signal="button_up" from="player/Camera2D/Map/Button1" to="player/Camera2D/Map/Button1" method="_on_button_up"]
