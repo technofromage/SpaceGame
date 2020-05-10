@@ -11,22 +11,42 @@
 [node name="room 0" type="Node2D" parent="."]
 z_index = -3
 
-[node name="Sprite2" type="Sprite" parent="room 0"]
-position = Vector2( -252.96, -170.665 )
-texture = ExtResource( 1 )
+[node name="Planet1" type="TextureButton" parent="room 0"]
+margin_left = -163.682
+margin_top = -174.812
+margin_right = -99.6825
+margin_bottom = -110.812
+texture_normal = ExtResource( 1 )
 script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+metal = 1000
+revealed_info = true
+
+[node name="Planet2" type="TextureButton" parent="room 0"]
+margin_left = 437.261
+margin_top = -150.041
+margin_right = 469.261
+margin_bottom = -118.041
+texture_normal = ExtResource( 2 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 metal = 1000
 
-[node name="Sprite" type="Sprite" parent="room 0"]
-position = Vector2( 214.437, 189.586 )
-texture = ExtResource( 2 )
+[node name="Planet3" type="TextureButton" parent="room 0"]
+margin_left = 21.157
+margin_top = 176.823
+margin_right = 53.157
+margin_bottom = 208.823
+texture_normal = ExtResource( 2 )
 script = ExtResource( 3 )
-
-[node name="Sprite3" type="Sprite" parent="room 0"]
-position = Vector2( 664.428, -55.8639 )
-texture = ExtResource( 2 )
-script = ExtResource( 3 )
-metal = 420
+__meta__ = {
+"_edit_use_anchors_": false
+}
+metal = 1000
 
 [node name="Sun" type="Sprite" parent="room 0"]
 position = Vector2( 703.146, 222.134 )
@@ -37,20 +57,41 @@ size = 3
 [node name="room 1" type="Node2D" parent="."]
 z_index = -3
 
-[node name="Sprite2" type="Sprite" parent="room 1"]
-position = Vector2( 290.723, -210.689 )
-texture = ExtResource( 2 )
+[node name="Planet" type="TextureButton" parent="room 1"]
+margin_left = 253.65
+margin_top = -112.1
+margin_right = 285.65
+margin_bottom = -80.1
+rect_pivot_offset = Vector2( 16, 16 )
+texture_normal = ExtResource( 2 )
 script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Sprite3" type="Sprite" parent="room 1"]
-position = Vector2( 455.78, 184.862 )
-texture = ExtResource( 2 )
+[node name="Planet2" type="TextureButton" parent="room 1"]
+margin_left = -411.277
+margin_top = 47.6084
+margin_right = -379.277
+margin_bottom = 79.6084
+rect_pivot_offset = Vector2( 16, 16 )
+texture_normal = ExtResource( 2 )
 script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Sprite" type="Sprite" parent="room 1"]
-position = Vector2( -110.001, 202.726 )
-texture = ExtResource( 2 )
+[node name="Planet3" type="TextureButton" parent="room 1"]
+margin_left = -142.994
+margin_top = 180.036
+margin_right = -110.994
+margin_bottom = 212.036
+rect_pivot_offset = Vector2( 16, 16 )
+texture_normal = ExtResource( 2 )
 script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Sun" type="Sprite" parent="room 1"]
 position = Vector2( 349.859, 327.004 )

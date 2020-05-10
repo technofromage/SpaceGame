@@ -7,7 +7,7 @@ var marker
 func _ready():
 	marker = get_node("../player_marker")
 
-func _on_button_up():
+func _pressed():
 	globals.changeRoom(numroom)
 	marker.set_position(get_position())
 	globals.set_fuel(globals.fuel-10)
