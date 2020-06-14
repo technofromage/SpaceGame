@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://sprites/spaceship.png" type="Texture" id=1]
 [ext_resource path="res://player.gd" type="Script" id=2]
@@ -17,6 +17,10 @@
 [ext_resource path="res://sounds/warp.wav" type="AudioStream" id=15]
 [ext_resource path="res://sounds/Bip.wav" type="AudioStream" id=16]
 [ext_resource path="res://CameraLabeling.gd" type="Script" id=17]
+[ext_resource path="res://ContextMenu.gd" type="Script" id=18]
+[ext_resource path="res://CloseButton.gd" type="Script" id=19]
+[ext_resource path="res://sprites/reject.png" type="Texture" id=20]
+[ext_resource path="res://sprites/icon.png" type="Texture" id=21]
 
 [node name="SpaceGame" type="Node2D"]
 position = Vector2( -35.1618, -20.3568 )
@@ -166,6 +170,161 @@ margin_right = -197.976
 margin_bottom = 732.307
 rect_scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ContextMenu" type="TextureRect" parent="player/Camera2D"]
+margin_left = -497.37
+margin_top = -25.3464
+margin_right = -402.37
+margin_bottom = 124.654
+texture = ExtResource( 11 )
+stretch_mode = 2
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button1" type="Button" parent="player/Camera2D/ContextMenu"]
+margin_left = 2.00766
+margin_top = 23.009
+margin_right = 92.0077
+margin_bottom = 43.009
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="player/Camera2D/ContextMenu"]
+margin_left = 1.89075
+margin_top = 50.42
+margin_right = 91.8908
+margin_bottom = 70.42
+
+[node name="Button3" type="Button" parent="player/Camera2D/ContextMenu"]
+margin_left = 2.40406
+margin_top = 76.0572
+margin_right = 92.404
+margin_bottom = 96.0572
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button4" type="Button" parent="player/Camera2D/ContextMenu"]
+margin_left = 1.89075
+margin_top = 99.671
+margin_right = 91.8907
+margin_bottom = 119.671
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button5" type="Button" parent="player/Camera2D/ContextMenu"]
+margin_left = 2.40406
+margin_top = 124.311
+margin_right = 92.404
+margin_bottom = 144.311
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CloseButton" type="TextureButton" parent="player/Camera2D/ContextMenu"]
+margin_left = 74.4348
+margin_top = 3.08005
+margin_right = 88.4348
+margin_bottom = 17.08
+texture_normal = ExtResource( 20 )
+script = ExtResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BigMenu" type="TextureRect" parent="player/Camera2D"]
+margin_left = -293.0
+margin_top = -287.0
+margin_right = 491.0
+margin_bottom = 289.0
+texture = ExtResource( 11 )
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Picture" type="TextureRect" parent="player/Camera2D/BigMenu"]
+margin_left = 543.0
+margin_top = 28.0
+margin_right = 778.0
+margin_bottom = 238.0
+texture = ExtResource( 21 )
+stretch_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="player/Camera2D/BigMenu"]
+margin_left = 8.89197
+margin_top = 6.67587
+margin_right = 519.892
+margin_bottom = 568.676
+
+[node name="BigContextMenu" type="TextureRect" parent="player/Camera2D/BigMenu"]
+margin_left = 545.0
+margin_top = 258.0
+margin_right = 772.0
+margin_bottom = 557.0
+texture = ExtResource( 11 )
+stretch_mode = 2
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button1" type="Button" parent="player/Camera2D/BigMenu/BigContextMenu"]
+margin_left = 53.4502
+margin_top = 24.814
+margin_right = 193.45
+margin_bottom = 54.814
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="player/Camera2D/BigMenu/BigContextMenu"]
+margin_left = 54.2358
+margin_top = 63.055
+margin_right = 194.236
+margin_bottom = 93.055
+
+[node name="Button3" type="Button" parent="player/Camera2D/BigMenu/BigContextMenu"]
+margin_left = 54.7491
+margin_top = 100.425
+margin_right = 194.749
+margin_bottom = 130.425
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button4" type="Button" parent="player/Camera2D/BigMenu/BigContextMenu"]
+margin_left = 55.1384
+margin_top = 140.284
+margin_right = 195.138
+margin_bottom = 170.284
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button5" type="Button" parent="player/Camera2D/BigMenu/BigContextMenu"]
+margin_left = 54.7492
+margin_top = 176.656
+margin_right = 194.749
+margin_bottom = 206.656
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CloseButton2" type="TextureButton" parent="player/Camera2D/BigMenu"]
+margin_left = 764.25
+margin_top = 7.6694
+margin_right = 778.25
+margin_bottom = 21.6694
+texture_normal = ExtResource( 20 )
+script = ExtResource( 19 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

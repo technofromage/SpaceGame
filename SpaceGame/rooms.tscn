@@ -22,12 +22,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 metal = 1000
-revealed_info = true
 
 [node name="Planet2" type="TextureButton" parent="room 0"]
-margin_left = 437.261
+margin_left = 435.674
 margin_top = -150.041
-margin_right = 469.261
+margin_right = 467.674
 margin_bottom = -118.041
 texture_normal = ExtResource( 2 )
 script = ExtResource( 3 )
@@ -48,10 +47,16 @@ __meta__ = {
 }
 metal = 1000
 
-[node name="Sun" type="Sprite" parent="room 0"]
-position = Vector2( 703.146, 222.134 )
-texture = ExtResource( 4 )
+[node name="Sun" type="TextureButton" parent="room 0"]
+margin_left = 277.522
+margin_top = 74.4566
+margin_right = 341.522
+margin_bottom = 138.457
+texture_normal = ExtResource( 4 )
 script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 size = 3
 
 [node name="room 1" type="Node2D" parent="."]
@@ -62,7 +67,6 @@ margin_left = 253.65
 margin_top = -112.1
 margin_right = 285.65
 margin_bottom = -80.1
-rect_pivot_offset = Vector2( 16, 16 )
 texture_normal = ExtResource( 2 )
 script = ExtResource( 3 )
 __meta__ = {
@@ -93,7 +97,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Sun" type="Sprite" parent="room 1"]
-position = Vector2( 349.859, 327.004 )
-texture = ExtResource( 4 )
+[node name="Sun" type="TextureButton" parent="room 1"]
+margin_left = 265.471
+margin_top = 89.6625
+margin_right = 329.471
+margin_bottom = 153.662
+texture_normal = ExtResource( 4 )
 script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

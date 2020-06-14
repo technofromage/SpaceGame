@@ -9,6 +9,7 @@ var currentroom = 0 #the current open room's array
 var player 		#the node for the player
 var room_file 	#the pre-loaded rooms.tscn file
 var sound_file	#the file for the audio display
+var contextMenu	#the context menu object
 
 func _ready():
 	room_file = preload("res://rooms.tscn").instance()#load the 0 room
@@ -20,6 +21,7 @@ func _ready():
 	powerbar = get_node("/root/SpaceGame/player/Camera2D/status/powerBar")
 	fuelbar = get_node("/root/SpaceGame/player/Camera2D/status/fuelBar")
 	sound_file = get_node("/root/SpaceGame/GlobalSounds")
+	contextMenu = get_node("/root/SpaceGame/player/Camera2D/ContextMenu")
 	set_power(50)	#settup display values
 	set_fuel(100)
 
@@ -46,3 +48,8 @@ func changeRoom(target):#changes currentroom to target #.
 		#get next room
 		next_room.get_parent().remove_child(next_room)
 		activeroom.add_child(next_room)
+
+func openContextMenu(object):#opens the context menu over the class "object"
+	contextMenu.set_visible(true)
+	contextMenu.attached_object = object
+	contextMenu.attachTo(object)
