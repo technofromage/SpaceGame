@@ -16,3 +16,13 @@ func getInfo(i):#This function returns a string for displaying on the UI
 func _pressed():
 	globals.set_power(globals.power-10)
 	globals.openContextMenu(self)
+
+func sample():#this function cannot be called if "sample" is already not in list
+	options.remove(options.find("sample"))
+	globals.openContextMenu(self)
+
+func look():
+	globals.openBigMenu(null,null)
+
+func destroy():
+	pass;

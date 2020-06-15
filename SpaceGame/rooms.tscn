@@ -22,6 +22,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 metal = 1000
+options = [ "sample", "look", "talk" ]
 
 [node name="Planet2" type="TextureButton" parent="room 0"]
 margin_left = 435.674

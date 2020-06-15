@@ -43,5 +43,4 @@ func _physics_process(delta):
 	translate(velocity*delta)
 	#function for solar power
 	var sunDist=get_node("/root/SpaceGame/activeroom").get_child(0).get_node("Sun").get_global_position().distance_to(get_global_position());
-	print(sunDist)
 	globals.set_power(globals.power+(1500/(sunDist*sunDist))*delta)	
