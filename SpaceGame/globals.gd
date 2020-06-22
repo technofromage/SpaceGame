@@ -58,5 +58,6 @@ func openContextMenu(object):#opens the context menu over the class "object"
 
 func openBigMenu(file, picture):
 	bigMenu.set_visible(true)
-	#bigMenu.attached_script = file
+	bigMenu.loadScript(file)
+	bigMenu.goTo("continue", true)
 	

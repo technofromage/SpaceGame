@@ -22,7 +22,7 @@ func sample():#this function cannot be called if "sample" is already not in list
 	globals.openContextMenu(self)
 
 func look():
-	globals.openBigMenu(null,null)
+	globals.openBigMenu("scripts/test_script.txt",null)
 
 func destroy():
 	pass;

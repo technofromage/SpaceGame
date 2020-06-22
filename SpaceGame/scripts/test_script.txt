@@ -1,0 +1,22 @@
+---continue---
+open, close, read
+
+testing these scrips in [tornado radius=5 freq=2]definatly[/tornado] intresting
+
+do you open the box?
+---end---
+---open---
+
+you open the box
+
+---end---
+---close---
+
+you close the box
+
+---end---
+---read---
+continue
+there is nothing to read
+
+---end---

@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://sprites/spaceship.png" type="Texture" id=1]
 [ext_resource path="res://player.gd" type="Script" id=2]
@@ -22,6 +22,8 @@
 [ext_resource path="res://sprites/reject.png" type="Texture" id=20]
 [ext_resource path="res://sprites/icon.png" type="Texture" id=21]
 [ext_resource path="res://ContextButton.gd" type="Script" id=22]
+[ext_resource path="res://BigMenu.gd" type="Script" id=23]
+[ext_resource path="res://BigContextMenu.gd" type="Script" id=24]
 
 [node name="SpaceGame" type="Node2D"]
 position = Vector2( -35.1618, -20.3568 )
@@ -251,12 +253,14 @@ __meta__ = {
 }
 
 [node name="BigMenu" type="TextureRect" parent="player/Camera2D"]
+visible = false
 margin_left = -293.0
 margin_top = -287.0
 margin_right = 491.0
 margin_bottom = 289.0
 texture = ExtResource( 11 )
 stretch_mode = 2
+script = ExtResource( 23 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -268,12 +272,20 @@ margin_right = 778.0
 margin_bottom = 238.0
 texture = ExtResource( 21 )
 stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="RichTextLabel" type="RichTextLabel" parent="player/Camera2D/BigMenu"]
-margin_left = 8.89197
-margin_top = 6.67587
-margin_right = 519.892
-margin_bottom = 568.676
+margin_left = 14.0
+margin_top = 26.0
+margin_right = 520.0
+margin_bottom = 569.0
+bbcode_enabled = true
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="BigContextMenu" type="TextureRect" parent="player/Camera2D/BigMenu"]
 margin_left = 545.0
@@ -282,7 +294,7 @@ margin_right = 772.0
 margin_bottom = 557.0
 texture = ExtResource( 11 )
 stretch_mode = 2
-script = ExtResource( 18 )
+script = ExtResource( 24 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -292,6 +304,7 @@ margin_left = 53.4502
 margin_top = 24.814
 margin_right = 193.45
 margin_bottom = 54.814
+text = "open"
 script = ExtResource( 22 )
 __meta__ = {
 "_edit_use_anchors_": false
