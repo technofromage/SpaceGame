@@ -1,0 +1,3 @@
++[num] [attr] -add number of attribute
+![num]	-toggle the num flag on parrent object
+*	-close the window

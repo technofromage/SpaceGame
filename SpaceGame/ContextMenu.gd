@@ -19,4 +19,8 @@ func attachTo(object):#TODO have the size of the context menu depend on the butt
 		while (i<5):#if there is no option then hide button
 			get_child(i).set_visible(false)
 			i=i+1;
-
+		if (attached_object.revealed_info):
+			get_child(6).set_visible(true)#6 is for the text label
+			get_child(6).set_text(attached_object.getInfo(0))
+		else:
+			get_child(6).set_visible(false)

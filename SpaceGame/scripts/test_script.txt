@@ -1,22 +1,26 @@
 ---continue---
-open, close, read
+open<+1 FUEL>, close<!1>, read<>
 
 testing these scrips in [tornado radius=5 freq=2]definatly[/tornado] intresting
 
 do you open the box?
 ---end---
 ---open---
+close<>
 
 you open the box
+you find fuel
 
 ---end---
 ---close---
+continue<>
 
 you close the box
 
 ---end---
 ---read---
-continue
+continue<>
+
 there is nothing to read
 
 ---end---

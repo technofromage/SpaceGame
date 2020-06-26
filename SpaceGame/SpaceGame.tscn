@@ -166,6 +166,18 @@ margin_right = 160.0
 margin_bottom = 68.0
 script = ExtResource( 14 )
 
+[node name="Metal Label" type="Label" parent="player/Camera2D/status"]
+margin_top = 72.0
+margin_right = 160.0
+margin_bottom = 86.0
+text = "Metal"
+
+[node name="metalBar" type="ProgressBar" parent="player/Camera2D/status"]
+margin_top = 90.0
+margin_right = 160.0
+margin_bottom = 104.0
+script = ExtResource( 14 )
+
 [node name="TextureRect" type="TextureRect" parent="player/Camera2D"]
 margin_left = -497.976
 margin_top = 115.307
@@ -178,11 +190,10 @@ __meta__ = {
 }
 
 [node name="ContextMenu" type="TextureRect" parent="player/Camera2D"]
-visible = false
-margin_left = -497.37
-margin_top = -25.3464
-margin_right = -402.37
-margin_bottom = 124.654
+margin_left = -497.0
+margin_top = -25.0
+margin_right = -402.0
+margin_bottom = 161.0
 texture = ExtResource( 11 )
 stretch_mode = 2
 script = ExtResource( 18 )
@@ -191,28 +202,28 @@ __meta__ = {
 }
 
 [node name="Button1" type="Button" parent="player/Camera2D/ContextMenu"]
-margin_left = 2.00766
-margin_top = 23.009
-margin_right = 92.0077
-margin_bottom = 43.009
+margin_left = 1.46732
+margin_top = 60.2939
+margin_right = 91.4674
+margin_bottom = 80.2939
 script = ExtResource( 22 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Button2" type="Button" parent="player/Camera2D/ContextMenu"]
-margin_left = 1.89075
-margin_top = 50.42
-margin_right = 91.8908
-margin_bottom = 70.42
+margin_left = 1.35041
+margin_top = 87.7049
+margin_right = 91.3505
+margin_bottom = 107.705
 script = ExtResource( 22 )
 number = 1
 
 [node name="Button3" type="Button" parent="player/Camera2D/ContextMenu"]
-margin_left = 2.40406
-margin_top = 76.0572
-margin_right = 92.404
-margin_bottom = 96.0572
+margin_left = 1.86372
+margin_top = 113.342
+margin_right = 91.8637
+margin_bottom = 133.342
 script = ExtResource( 22 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -220,10 +231,10 @@ __meta__ = {
 number = 2
 
 [node name="Button4" type="Button" parent="player/Camera2D/ContextMenu"]
-margin_left = 1.89075
-margin_top = 99.671
-margin_right = 91.8907
-margin_bottom = 119.671
+margin_left = 1.35041
+margin_top = 136.956
+margin_right = 91.3504
+margin_bottom = 156.956
 script = ExtResource( 22 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -231,10 +242,10 @@ __meta__ = {
 number = 3
 
 [node name="Button5" type="Button" parent="player/Camera2D/ContextMenu"]
-margin_left = 2.40406
-margin_top = 124.311
-margin_right = 92.404
-margin_bottom = 144.311
+margin_left = 1.86372
+margin_top = 161.596
+margin_right = 91.8637
+margin_bottom = 181.596
 script = ExtResource( 22 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -248,6 +259,15 @@ margin_right = 88.4348
 margin_bottom = 17.08
 texture_normal = ExtResource( 20 )
 script = ExtResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="player/Camera2D/ContextMenu"]
+margin_left = 5.0
+margin_top = 19.0
+margin_right = 88.0
+margin_bottom = 56.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
