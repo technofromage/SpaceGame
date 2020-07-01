@@ -26,7 +26,7 @@ func _physics_process(delta):
 	if(Input.is_action_pressed("ui_up")):
 		velocity.x+=(cos(rot*PI/180))
 		velocity.y+=(sin(rot*PI/180))
-		globals.set_fuel(globals.fuel-0.1)
+		globals.set_fuel(	globals.fuel-0.1)
 	if(Input.is_action_pressed("ui_down")):
 		velocity.x-=(cos(rot*PI/180))
 		velocity.y-=(sin(rot*PI/180))
