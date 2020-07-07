@@ -19,10 +19,11 @@ func _process(delta):
 		speed=0
 		if spinning == true:
 			if (ceil(get_rotation()/(2*PI/options)))<=bad:
-				output.set_text("bad"+str(ceil(get_rotation()/(2*PI/options))))
+				badThing()
 			else:
-				output.set_text("good"+str(ceil(get_rotation()/(2*PI/options))))
+				goodThing()
 			spinning = false
+			get_parent().addResult()
 	rotate(speed*delta)
 	if (get_rotation()>2*PI):
 		set_rotation(get_rotation()-(2*PI))
@@ -47,3 +48,9 @@ func _draw():
 		i=i+1
 	draw_line(Vector2(0,0),Vector2(radius,0),Color.gray,4)
 	
+func badThing():
+	output.set_text("bad outcome, food - 10")
+	globals.food = globals.food-10
+func goodThing():
+	output.set_text("good outcome, food + 2")
+	globals.food = globals.food+2

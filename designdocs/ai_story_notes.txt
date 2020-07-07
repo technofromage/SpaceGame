@@ -1,0 +1,4 @@
+idea:
+the robots have gained sentiance a long time ago, this is hinted at, but they dont do anything revolutionary
+
+if the player develops the resource stations (declaring themselves the "creators") the ai may interupt the final chapter in the player's favor

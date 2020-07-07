@@ -2,8 +2,9 @@ extends Node
 
 var health = 100
 var fuel = 100
-var power = 50
-var metal = 0
+var power = 100
+var metal = 100
+var food = 100
 var powerbar	#the node for the power display
 var fuelbar		#the node for the fuel display
 var metalbar	#the node for the metal display
@@ -30,11 +31,15 @@ func _ready():
 	bigMenu = get_node("/root/SpaceGame/player/Camera2D/BigMenu")
 	set_power(50)	#settup display values
 	set_fuel(100)
-	set_metal(0)
+	set_metal(100)
 
 func set_fuel(target):#sets fuel to target # and refreshes the appropriate HUD
 	fuelbar.updatevalue(target)
 	fuel = target
+	if fuel <= 0:
+		bigMenu.set_visible(true)
+		bigMenu.loadScript("scripts/stranded.txt")
+		bigMenu.goTo("fuel", true)
 
 func set_metal(target):#sets fuel to target # and refreshes the appropriate HUD
 	metalbar.updatevalue(target)
@@ -43,6 +48,10 @@ func set_metal(target):#sets fuel to target # and refreshes the appropriate HUD
 func set_power(target):#sets power to target # and refreshes the appropriate HUD
 	powerbar.updatevalue(target)
 	power = target
+	if power <= 0:
+		bigMenu.set_visible(true)
+		bigMenu.loadScript("scripts/stranded.txt")
+		bigMenu.goTo("power", true)
 
 func changeRoom(target):#changes currentroom to target #.
 	if (currentroom != target):

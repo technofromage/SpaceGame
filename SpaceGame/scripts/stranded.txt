@@ -1,0 +1,10 @@
+---fuel---
+wait>wait
+You have ran out of fuel
+As your ship begins to drift you have no choice but to wait for fuel to come to you
+---end---
+---power---
+wait>wait
+You have ran out of power
+As the lights turn of in the ship you have no choice but to wait
+---end---
