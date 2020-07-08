@@ -1,6 +1,5 @@
 extends TextureRect
 
-
 export var wheels = 2
 var complete = 0
 
@@ -9,6 +8,7 @@ func addResult():
 	get_node("SpinButton").set_visible(false)
 	if complete==wheels:
 		get_node("ContinueButton").set_visible(true)
+		globals.cycles = globals.cycles+1
 
 func open():
 	set_visible(true)

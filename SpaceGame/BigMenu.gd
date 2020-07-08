@@ -24,6 +24,8 @@ func readScript(target, fromstart):#outputs the string from that section
 	var temp = attachedFile.get_line()
 	while (temp!="---"+target+"---"):#go to the target string name
 		temp=attachedFile.get_line()
+		if (temp == null):
+			return "error marker not found"
 	temp=attachedFile.get_line()
 	var temp2
 	var i=0
@@ -39,6 +41,8 @@ func readScript(target, fromstart):#outputs the string from that section
 	while (temp!="---end---"):
 		output=output+"\n"+temp
 		temp=attachedFile.get_line()
+		if (temp == null):
+			return "error no end marker"
 	return output
 
 func goTo(target, fromstart):#handling children will happen here

@@ -1,9 +1,11 @@
 extends Node
 
+var paused = false
+
 var health = 100
 var fuel = 100
 var power = 100
-var metal = 100
+var metal = 0
 var food = 100
 var powerbar	#the node for the power display
 var fuelbar		#the node for the fuel display
@@ -14,7 +16,8 @@ var room_file 	#the pre-loaded rooms.tscn file
 var sound_file	#the file for the audio display
 var contextMenu	#the context menu object
 var bigMenu		#the large context menu
-
+var looseMenu	#temp
+var cycles = 0
 
 func _ready():
 	room_file = preload("res://rooms.tscn").instance()#load the 0 room
@@ -29,14 +32,16 @@ func _ready():
 	sound_file = get_node("/root/SpaceGame/GlobalSounds")
 	contextMenu = get_node("/root/SpaceGame/player/Camera2D/ContextMenu")
 	bigMenu = get_node("/root/SpaceGame/player/Camera2D/BigMenu")
+	looseMenu = get_node("/root/SpaceGame/player/Camera2D/looseText")	#TODO: replace with actual loss
 	set_power(50)	#settup display values
 	set_fuel(100)
-	set_metal(100)
+	set_metal(0)
 
 func set_fuel(target):#sets fuel to target # and refreshes the appropriate HUD
 	fuelbar.updatevalue(target)
 	fuel = target
 	if fuel <= 0:
+		paused = true
 		bigMenu.set_visible(true)
 		bigMenu.loadScript("scripts/stranded.txt")
 		bigMenu.goTo("fuel", true)
@@ -49,9 +54,16 @@ func set_power(target):#sets power to target # and refreshes the appropriate HUD
 	powerbar.updatevalue(target)
 	power = target
 	if power <= 0:
+		paused = true
 		bigMenu.set_visible(true)
 		bigMenu.loadScript("scripts/stranded.txt")
 		bigMenu.goTo("power", true)
+
+func set_food(target):
+	food = target
+	if target <= 0:
+		looseMenu.set_text("The city has starved. You lasted " + str(cycles) + "days")
+		looseMenu.set_visible(true)
 
 func changeRoom(target):#changes currentroom to target #.
 	if (currentroom != target):
@@ -78,4 +90,3 @@ func openBigMenu(file, picture):
 	bigMenu.set_visible(true)
 	bigMenu.loadScript(file)
 	bigMenu.goTo("continue", true)
-	

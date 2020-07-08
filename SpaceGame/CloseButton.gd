@@ -9,3 +9,4 @@ extends TextureButton
 func _pressed():
 	get_parent().set_visible(false)
 	globals.player.forceStoped=false
+	globals.paused=false

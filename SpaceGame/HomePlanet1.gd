@@ -5,7 +5,7 @@ export var revealed_info = true; #if true then the info is drawn
 #for use with the CameraLabeling function
 #this should describe how many different variables there are to draw in the getInfo function
 var dataCount=1
-export var options = ["build"]
+export var options = ["build", "refuel"]
 
 func getInfo(i):#This function returns a string for displaying on the UI
 	if (i==0):
@@ -23,3 +23,6 @@ func build():
 		globals.food = globals.food + 10#this is global b/c it needs to be traked when the planet is not loaded
 		globals.set_metal(globals.metal-30)
 		globals.openContextMenu(self)
+		
+func refuel():
+	globals.set_fuel(100)

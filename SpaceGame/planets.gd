@@ -6,7 +6,7 @@ export var revealed_info = false; #if true then the info is drawn
 #for use with the CameraLabeling function
 #this should describe how many different variables there are to draw in the getInfo function
 var dataCount=1
-export var options = ["sample","look","harvest"]
+export var options = ["sample","harvest"]
 
 func getInfo(i):#This function returns a string for displaying on the UI
 	if (i==0):
@@ -21,12 +21,8 @@ func _pressed():
 
 func sample():#this function cannot be called if "sample" is already not in list
 	revealed_info=true
+	#options.remove(options.find("sample"))
 	globals.openContextMenu(self)
-	options.remove(options.find("sample"))
-	globals.openContextMenu(self)
-
-func look():
-	globals.openBigMenu("scripts/test_script.txt",null)
 
 func harvest():
 	if (globals.power>20) && (globals.metal<100):

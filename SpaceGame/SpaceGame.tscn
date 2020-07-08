@@ -77,10 +77,10 @@ current = true
 script = ExtResource( 17 )
 
 [node name="TextureRect" type="TextureRect" parent="player/Camera2D"]
-margin_left = -497.976
-margin_top = 115.307
-margin_right = -197.976
-margin_bottom = 732.307
+margin_left = -502.187
+margin_top = 107.939
+margin_right = -202.187
+margin_bottom = 724.939
 rect_scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 3 )
 __meta__ = {
@@ -474,6 +474,16 @@ margin_top = 90.0
 margin_right = 160.0
 margin_bottom = 104.0
 script = ExtResource( 14 )
+
+[node name="looseText" type="RichTextLabel" parent="player/Camera2D"]
+visible = false
+margin_left = -241.671
+margin_top = -146.036
+margin_right = 227.329
+margin_bottom = 112.964
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="activeroom" type="Node2D" parent="."]
 
