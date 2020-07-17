@@ -7,9 +7,7 @@ var fuel = 100
 var power = 100
 var metal = 0
 var food = 100
-var powerbar	#the node for the power display
-var fuelbar		#the node for the fuel display
-var metalbar	#the node for the metal display
+var inventory	#contains all the ui elements
 var currentroom = 0 #the current open room's array 
 var player 		#the node for the player
 var room_file 	#the pre-loaded rooms.tscn file
@@ -26,9 +24,7 @@ func _ready():
 	next_activeroom.get_parent().remove_child(next_activeroom)
 	get_node("/root/SpaceGame/activeroom").add_child(next_activeroom)
 	player = get_node("/root/SpaceGame/player")	#mark all usefull nodes
-	powerbar = get_node("/root/SpaceGame/player/Camera2D/status/powerBar")
-	fuelbar = get_node("/root/SpaceGame/player/Camera2D/status/fuelBar")
-	metalbar = get_node("/root/SpaceGame/player/Camera2D/status/metalBar")
+	inventory = get_node("/root/SpaceGame/player/Camera2D/HUD/Inventory")
 	sound_file = get_node("/root/SpaceGame/GlobalSounds")
 	contextMenu = get_node("/root/SpaceGame/player/Camera2D/ContextMenu")
 	bigMenu = get_node("/root/SpaceGame/player/Camera2D/BigMenu")
@@ -38,7 +34,7 @@ func _ready():
 	set_metal(0)
 
 func set_fuel(target):#sets fuel to target # and refreshes the appropriate HUD
-	fuelbar.updatevalue(target)
+	inventory.set(1,target)
 	fuel = target
 	if fuel <= 0:
 		paused = true
@@ -47,11 +43,11 @@ func set_fuel(target):#sets fuel to target # and refreshes the appropriate HUD
 		bigMenu.goTo("fuel", true)
 
 func set_metal(target):#sets fuel to target # and refreshes the appropriate HUD
-	metalbar.updatevalue(target)
+	inventory.set(2,target)
 	metal = target
 
 func set_power(target):#sets power to target # and refreshes the appropriate HUD
-	powerbar.updatevalue(target)
+	inventory.set(1,target)
 	power = target
 	if power <= 0:
 		paused = true

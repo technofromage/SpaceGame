@@ -1,0 +1,65 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://sprites/sidemenu.png" type="Texture" id=1]
+[ext_resource path="res://Inventory.gd" type="Script" id=2]
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 5.75177
+margin_top = -218.533
+margin_right = 305.752
+margin_bottom = 398.467
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Inventory" type="VBoxContainer" parent="."]
+margin_right = 200.0
+margin_bottom = 104.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PowerLabel" type="Label" parent="Inventory"]
+margin_right = 200.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 200, 10 )
+text = "Power"
+
+[node name="PowerBar" type="ProgressBar" parent="Inventory"]
+margin_top = 18.0
+margin_right = 200.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 200, 10 )
+
+[node name="FuelLabel" type="Label" parent="Inventory"]
+margin_top = 36.0
+margin_right = 200.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 200, 10 )
+text = "Fuel"
+
+[node name="FuelBar" type="ProgressBar" parent="Inventory"]
+margin_top = 54.0
+margin_right = 200.0
+margin_bottom = 68.0
+rect_min_size = Vector2( 200, 10 )
+
+[node name="MetalLabel" type="Label" parent="Inventory"]
+margin_top = 72.0
+margin_right = 200.0
+margin_bottom = 86.0
+rect_min_size = Vector2( 200, 10 )
+text = "Metal"
+
+[node name="MetalBar" type="ProgressBar" parent="Inventory"]
+margin_top = 90.0
+margin_right = 200.0
+margin_bottom = 104.0
+rect_min_size = Vector2( 200, 10 )
