@@ -419,7 +419,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HUD" type="CanvasLayer" parent="player/Camera2D" instance=ExtResource( 3 )]
+[node name="HUD" parent="player/Camera2D" instance=ExtResource( 3 )]
 
 [node name="looseText" type="RichTextLabel" parent="player/Camera2D"]
 visible = false

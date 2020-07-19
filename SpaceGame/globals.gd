@@ -34,7 +34,7 @@ func _ready():
 	set_metal(0)
 
 func set_fuel(target):#sets fuel to target # and refreshes the appropriate HUD
-	inventory.set(1,target)
+	inventory.set(inventory.FUEL,target)
 	fuel = target
 	if fuel <= 0:
 		paused = true
@@ -43,11 +43,11 @@ func set_fuel(target):#sets fuel to target # and refreshes the appropriate HUD
 		bigMenu.goTo("fuel", true)
 
 func set_metal(target):#sets fuel to target # and refreshes the appropriate HUD
-	inventory.set(2,target)
+	inventory.set(inventory.METAL,target)
 	metal = target
 
 func set_power(target):#sets power to target # and refreshes the appropriate HUD
-	inventory.set(1,target)
+	inventory.set(inventory.POWER,target)
 	power = target
 	if power <= 0:
 		paused = true
