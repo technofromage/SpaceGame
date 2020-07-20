@@ -11,14 +11,17 @@ var inventory	#contains all the ui elements
 var currentroom = 0 #the current open room's array 
 var player 		#the node for the player
 var room_file 	#the pre-loaded rooms.tscn file
+var spawnables	#the pre-loaded SpawnableObjects.tscn file
 var sound_file	#the file for the audio display
 var contextMenu	#the context menu object
 var bigMenu		#the large context menu
 var looseMenu	#temp
 var cycles = 0
+var rng = RandomNumberGenerator.new()
 
 func _ready():
 	room_file = preload("res://rooms.tscn").instance()#load the 0 room
+	spawnables = preload("res://SpawnableObjects.tscn").instance()#load the objects pallet
 	var next_activeroom= room_file.get_child(currentroom)
 	#var next_activeroom = get_node("/root/SpaceGame/rooms/room 0")
 	next_activeroom.get_parent().remove_child(next_activeroom)
@@ -62,6 +65,7 @@ func set_food(target):
 		looseMenu.set_visible(true)
 
 func changeRoom(target):#changes currentroom to target #.
+	#the new room is next_room, the old room is current_room
 	if (currentroom != target):
 		currentroom = target
 		player.set_position(Vector2(0,0))
@@ -70,6 +74,10 @@ func changeRoom(target):#changes currentroom to target #.
 		var activeroom = get_node("/root/SpaceGame/activeroom")
 		var current_room=activeroom.get_child(0)
 		var next_room= room_file.get_node("room "+str(target))
+		#add clutter to new room
+		var clone = spawnables.get_node("FloatingTrash").duplicate()
+		clone.rect_position = Vector2(rng.randi_range(0,100),rng.randi_range(0,100));
+		next_room.add_child(clone)
 		#put room back
 		activeroom.remove_child(current_room)
 		room_file.add_child(current_room)

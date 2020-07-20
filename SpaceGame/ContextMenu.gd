@@ -1,12 +1,15 @@
 extends TextureRect
 
-
 var attached_object = null
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):#needs to move every frame b/c attached to camera #attached to camera for rotation correction
 	if (attached_object!=null):
+		if !is_instance_valid(attached_object):
+			attached_object = null
+			close()
+			return;
 		set_global_position(attached_object.get_global_position())
 		rect_position+=Vector2(25,25)
 
@@ -24,3 +27,8 @@ func attachTo(object):#TODO have the size of the context menu depend on the butt
 			get_child(6).set_text(attached_object.getInfo(0))
 		else:
 			get_child(6).set_visible(false)
+
+func close():
+	set_visible(false)
+	globals.player.forceStoped=false
+	globals.paused=false

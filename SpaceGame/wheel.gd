@@ -1,7 +1,7 @@
 extends Node2D
 
 var options = 7#full options --default to neutral
-var bad = 2
+var bad = 3
 const radius = 80
 var speed = 0
 var spinning = false

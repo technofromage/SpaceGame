@@ -57,3 +57,8 @@ func wait():
 	set_visible(false)
 	globals.set_fuel(globals.fuel+20)
 	globals.set_power(globals.power+20)
+
+func close():
+	set_visible(false)
+	globals.player.forceStoped=false
+	globals.paused=false

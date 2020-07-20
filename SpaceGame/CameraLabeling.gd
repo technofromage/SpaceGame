@@ -15,16 +15,3 @@ func _process(delta):#for the zoom
 		set_scale(Vector2(2,2))
 		set_zoom(Vector2(2,2))
 	update()
-
-#func _draw():
-		#for each child in room IE each planet draw the info
-#	for i in room.get_child(0).get_children():
-#		var targetPos
-#		if (drawExtra):
-#			if (i.revealed_info==true):
-#				targetPos = i.get_global_transform_with_canvas().origin-get_viewport().size/2
-#				draw_line(targetPos,targetPos+Vector2(50,50),Color(0,200,0),2)
-#				draw_line(targetPos+Vector2(50,50),targetPos+Vector2(80,50),Color(0,200,0),2)
-#				draw_string(UIFont,targetPos+Vector2(50,50),i.objType,Color(50,120,50))
-#				for j in range(i.dataCount):
-#					draw_string(UIFont,targetPos+Vector2(50,70+20*j),i.getInfo(j),Color(50,120,50))

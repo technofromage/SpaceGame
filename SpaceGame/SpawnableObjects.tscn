@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://FloatingTrash.gd" type="Script" id=1]
+[ext_resource path="res://sprites/metalscraps.png" type="Texture" id=2]
+
+[node name="Node" type="Node"]
+
+[node name="FloatingTrash" type="TextureButton" parent="."]
+texture_normal = ExtResource( 2 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

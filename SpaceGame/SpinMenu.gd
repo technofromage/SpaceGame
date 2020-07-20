@@ -15,3 +15,8 @@ func open():
 	complete = 0
 	get_node("ContinueButton").set_visible(false)
 	get_node("SpinButton").set_visible(true)
+
+func close():
+	set_visible(false)
+	globals.player.forceStoped=false
+	globals.paused=false
