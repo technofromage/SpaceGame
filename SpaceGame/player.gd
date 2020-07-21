@@ -3,14 +3,25 @@ extends Node2D
 var velocity = Vector2(0,0)
 var rot= 0
 var forceStoped = false
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+var radar = false
+var radarRadius = 10000
+const radarMaxTime = 200
+const radarMaxRad = 150	#the difference between time and radious max is the time without any pings
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
+
 	if globals.paused :
 		delta = 0
+
+	if radar:
+		if radarRadius>radarMaxTime:
+			radarRadius=1
+		radarRadius+=delta*30
+		globals.set_power(globals.power-0.5*delta)
+		get_node("Area2D").shape_owner_get_shape(0,0).radius=radarRadius	#this is convuluted because godot physics doesnt like changing shapes
+		update()
+
 	if(Input.is_action_pressed("ui_left")):
 		if (Input.is_action_pressed("ui_alt")):
 			velocity.x-=(cos((rot+90)*PI/180))
@@ -41,9 +52,16 @@ func _physics_process(delta):
 		if (abs(velocity.y)<1):
 			velocity.y=0	
 		globals.set_fuel(globals.fuel-0.4*( (velocity.x+velocity.y)/100 ))
-	globals.set_power(globals.power-0.5*delta)
 	set_rotation_degrees(rot)
 	translate(velocity*delta)
 	#function for solar power
 	var sunDist=get_node("/root/SpaceGame/activeroom").get_child(0).get_node("Sun").get_global_position().distance_to(get_global_position());
 	globals.set_power(globals.power+(40*pow(3,-(sunDist*sunDist)/10000))*delta)	#TODO make stronger and damage ship when close
+
+func _draw():
+	if radarRadius < 150:
+		draw_arc(Vector2(0,0),radarRadius, 0,2*PI, 20,Color(0,0.5,0.8,1-(radarRadius/150)))
+
+
+func _on_Area2D_area_entered(area):
+	area.get_parent().visible=true

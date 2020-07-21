@@ -82,6 +82,11 @@ ui_brake={
  ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="Player"
+2d_physics/layer_2="Scanables"
+
 [rendering]
 
 environment/default_clear_color=Color( 0.121569, 0.121569, 0.121569, 1 )
