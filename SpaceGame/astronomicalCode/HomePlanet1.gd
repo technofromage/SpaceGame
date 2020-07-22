@@ -16,7 +16,7 @@ func getInfo(i):#This function returns a string for displaying on the UI
 
 func build():
 	if globals.metal >= 30:
-		globals.food = globals.food + 10#this is global b/c it needs to be traked when the planet is not loaded
+		globals.food = globals.food + 7#this is global b/c it needs to be traked when the planet is not loaded
 		globals.set_metal(globals.metal-30)
 		globals.openContextMenu(self)
 		
