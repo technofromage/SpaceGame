@@ -8,9 +8,14 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "TextureButton",
+"class": "AstronomicalObject",
+"language": "GDScript",
+"path": "res://astronomicalCode/AstronomicalObject.gd"
+} ]
 _global_script_class_icons={
-
+"AstronomicalObject": "res://sprites/planet.png"
 }
 
 [application]
